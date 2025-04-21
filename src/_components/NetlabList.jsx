@@ -14,19 +14,19 @@ const list = [
     quote:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     name: "Sistem Basis Data dan Praktikum",
-    avatarSrc: "assets/netlab/DMJLogo.svg",
+    avatarSrc: "/assets/netlab/DMJLogo.svg",
   },
   {
     quote:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     name: "Sistem Operasi",
-    avatarSrc: "assets/netlab/OSLogo.svg",
+    avatarSrc: "/assets/netlab/OSLogo.svg",
   },
   {
     quote:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     name: "Desain dan Manajemen Jaringan Komputer",
-    avatarSrc: "assets/netlab/SBDLogo.svg",
+    avatarSrc: "/assets/netlab/SBDLogo.svg",
   },
 ];
 

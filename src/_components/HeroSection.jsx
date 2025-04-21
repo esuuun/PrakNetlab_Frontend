@@ -16,8 +16,8 @@ const HeroSection = () => {
 
   const logoSrc =
     theme === "dark"
-      ? "assets/netlab/logo_light.svg"
-      : "assets/netlab/logo_dark.svg";
+      ? "/assets/netlab/logo_light.svg"
+      : "/assets/netlab/logo_dark.svg";
 
   return (
     <>
