@@ -14,10 +14,7 @@ const HeroSection = () => {
     { title: "OS", path: "#netlabList" },
   ];
 
-  const logoSrc =
-    theme === "dark"
-      ? "/assets/netlab/logo_light.svg"
-      : "/assets/netlab/logo_dark.svg";
+  const logoSrc = theme === "dark" ? "/logo_light.svg" : "/logo_dark.svg";
 
   return (
     <>
