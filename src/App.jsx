@@ -3,7 +3,7 @@ import NetlabList from "./_components/NetlabList";
 
 export default function App() {
   return (
-    <div className="bg-background flex flex-col gap-20">
+    <div className="relative bg-background flex flex-col gap-20 overflow-hidden">
       <HeroSection />
       <NetlabList />
     </div>

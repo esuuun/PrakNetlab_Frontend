@@ -3,6 +3,7 @@ import { Button } from "../components/ui/button";
 import { useState } from "react";
 import { ModeToggle } from "../components/ui/modeToggle";
 import { useTheme } from "../components/theme-provider";
+import { Spotlight } from "../components/ui/spotlight";
 
 const HeroSection = () => {
   const { theme } = useTheme();
@@ -83,6 +84,7 @@ const HeroSection = () => {
         </nav>
       </header>
       <section className="mt-24 mx-auto max-w-screen-xl pb-4 px-4 sm:px-8">
+        <Spotlight />
         <div className="text-center space-y-4">
           <h1 className="text-foreground font-bold text-4xl md:text-5xl">
             Welcome to
