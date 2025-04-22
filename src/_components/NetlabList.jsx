@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 
 const classNames = {
   container: "max-w-7xl mx-auto",
@@ -45,27 +46,39 @@ function NetlabList() {
 
         <div className={`grid-cols-1 gap-5 ${classNames.grid}`}>
           {list.map((item, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.2,
+                type: "spring",
+                stiffness: 100,
+              }}
               key={index}
-              className={`${classNames.card} ${
-                index % 2 === 0 ? "xl:-rotate-2" : "xl:rotate-2"
-              } hover:-translate-y-8 duration-300 ease-in-out cursor-pointer`}
             >
-              <div className="flex items-center justify-center -mt-14 mb-6">
-                <img className="object-fill w-24 h-24" src={item.avatarSrc} />
+              <div
+                key={index}
+                className={`${classNames.card} ${
+                  index % 2 === 0 ? "xl:-rotate-2" : "xl:rotate-2"
+                } hover:-translate-y-8 duration-300 ease-in-out cursor-pointer`}
+              >
+                <div className="flex items-center justify-center -mt-14 mb-6">
+                  <img className="object-fill w-24 h-24" src={item.avatarSrc} />
+                </div>
+                <div className="flex items-center justify-center">
+                  <span className="text-black font-bold text-lg text-center w-full">
+                    {item.name}
+                  </span>
+                </div>
+                <div className={classNames.footer}></div>
+                <blockquote>
+                  <p className="text-base text-center font-medium leading-9 text-gray-900">
+                    {item.quote}
+                  </p>
+                </blockquote>
               </div>
-              <div className="flex items-center justify-center">
-                <span className="text-black font-bold text-lg text-center w-full">
-                  {item.name}
-                </span>
-              </div>
-              <div className={classNames.footer}></div>
-              <blockquote>
-                <p className="text-base text-center font-medium leading-9 text-gray-900">
-                  {item.quote}
-                </p>
-              </blockquote>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
